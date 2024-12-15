@@ -24,10 +24,8 @@ public class Main {
 
     }
 
-
-
-
-
+    // TODO sistem tekrar eden Kullanici Adini kayıt etmemeli
+    // frkntrkmn kullanici adi tekrar ediyor ve kayıt gerçekleşiyor--> 2.kez kayıt atılamamalı
     public static void kullaniciEkle(){
 
         KullaniciController kullaniciController= new KullaniciController();
@@ -36,6 +34,9 @@ public class Main {
                 "ali@gmail.com","alikc","asd");
 
         kullaniciController.kullaniciSave("furkan", "türkmen",
+                "frkn@gmail.com","frkntkrmn","xaxa");
+
+        kullaniciController.kullaniciSave("fikret", "tarkan",
                 "frkn@gmail.com","frkntkrmn","xaxa");
 
         kullaniciController.kullaniciSave("mehmet", "erbil",
