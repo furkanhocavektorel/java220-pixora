@@ -10,29 +10,33 @@ public class Main {
     // FRONT SIM -test sim
     public static void main(String[] args) {
 
-        Scanner src= new Scanner(System.in);
-
-        System.out.println("ad giriniz");
-        String ad=src.nextLine();
-
-        System.out.println("soyad giriniz");
-        String soyad=src.nextLine();
-
-        System.out.println("email giriniz");
-        String email=src.nextLine();
-
-        System.out.println("sifre giriniz");
-        String sifre=src.nextLine();
-
-        System.out.println("kullaniciAdi giriniz");
-        String kullaniciAdi=src.nextLine();
+        kullaniciEkle();
 
         KullaniciController kullaniciController= new KullaniciController();
-        kullaniciController.kullaniciSave(ad,soyad,
-                email,kullaniciAdi,sifre);
 
-        System.out.println(Database.kullaniciList.get(0).bilgiGetir());
+        Kullanici k=kullaniciController.kullaniciGetirKullaniciAdaGore("frkntkrmn");
 
+        System.out.println(k.bilgiGetir());
+
+
+    }
+
+
+
+
+
+    public static void kullaniciEkle(){
+
+        KullaniciController kullaniciController= new KullaniciController();
+
+        kullaniciController.kullaniciSave("ali", "koc",
+                "ali@gmail.com","alikc","asd");
+
+        kullaniciController.kullaniciSave("furkan", "türkmen",
+                "frkn@gmail.com","frkntkrmn","xaxa");
+
+        kullaniciController.kullaniciSave("mehmet", "erbil",
+                "mehmet@gmail.com","mehmeterbil","hgfgsd");
     }
 
 

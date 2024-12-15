@@ -19,4 +19,11 @@ public class KullaniciServis {
         kullaniciRepository.kullaniciKaydet(kullanici);
     }
 
+    public Kullanici kullaniciGetirKullaniciAdinaGore(String kullaniciAdi){
+
+        KullaniciRepository kullaniciRepository= new KullaniciRepository();
+        return kullaniciRepository.kullaniciGetirKullaniciAdinaGore(kullaniciAdi);
+    }
+
+
 }

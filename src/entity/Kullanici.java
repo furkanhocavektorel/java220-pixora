@@ -11,7 +11,7 @@ public class Kullanici {
 
     public String bilgiGetir(){
         String bilgiler="ad:"+ad+", soyad:"+soyad+
-                ", email:"+email+", kullaniciAdi"+kullaniciAdi;
+                ", email:"+email+", kullaniciAdi:"+kullaniciAdi;
         return bilgiler;
     }
 
