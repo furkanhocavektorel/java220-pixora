@@ -9,6 +9,11 @@ public class Kullanici {
     private String sifre;
 
 
+    public String bilgiGetir(){
+        String bilgiler="ad:"+ad+", soyad:"+soyad+
+                ", email:"+email+", kullaniciAdi"+kullaniciAdi;
+        return bilgiler;
+    }
 
 
 
