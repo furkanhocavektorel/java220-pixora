@@ -3,6 +3,8 @@ package service;
 import entity.Kullanici;
 import repository.KullaniciRepository;
 
+import java.util.List;
+
 public class KullaniciServis {
 
     public void kullanciKaydet(String ad,String soyad,String email,
@@ -23,6 +25,14 @@ public class KullaniciServis {
 
         KullaniciRepository kullaniciRepository= new KullaniciRepository();
         return kullaniciRepository.kullaniciGetirKullaniciAdinaGore(kullaniciAdi);
+    }
+
+    public List<Kullanici> kullaniciGetirAdaGore(String ad){
+
+        KullaniciRepository kullaniciRepository= new KullaniciRepository();
+
+        return kullaniciRepository.kullaniciGetirAdaGore(ad);
+
     }
 
 

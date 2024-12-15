@@ -5,7 +5,7 @@ public class Kullanici {
     private String soyad;
     private String email;
     private String telefon;
-    private String kullaniciAdi;
+    private String kullaniciAdi;//username
     private String sifre;
 
 

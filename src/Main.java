@@ -3,6 +3,7 @@ import entity.Kullanici;
 import entity.Paylasim;
 import sim.Database;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -14,9 +15,11 @@ public class Main {
 
         KullaniciController kullaniciController= new KullaniciController();
 
-        Kullanici k=kullaniciController.kullaniciGetirKullaniciAdaGore("frkntkrmn");
+        List<Kullanici> list =kullaniciController.kullaniciGetirAdaGore("mehmet");
 
-        System.out.println(k.bilgiGetir());
+        for (Kullanici k : list){
+            System.out.println(k.bilgiGetir());
+        }
 
 
     }
@@ -37,6 +40,10 @@ public class Main {
 
         kullaniciController.kullaniciSave("mehmet", "erbil",
                 "mehmet@gmail.com","mehmeterbil","hgfgsd");
+
+        kullaniciController.kullaniciSave("mehmet", "ertug",
+                "mehmetertg@gmail.com","ertugmehmet","hfgsa2");
+
     }
 
 

@@ -3,6 +3,8 @@ package controller;
 import entity.Kullanici;
 import service.KullaniciServis;
 
+import java.util.List;
+
 public class KullaniciController {
 
 
@@ -29,6 +31,13 @@ public class KullaniciController {
 
          return kullaniciServis.kullaniciGetirKullaniciAdinaGore(kullaniciAdi);
 
+    }
+
+
+    public List<Kullanici> kullaniciGetirAdaGore(String ad){
+        KullaniciServis kullaniciServis= new KullaniciServis();
+        List<Kullanici> list= kullaniciServis.kullaniciGetirAdaGore(ad) ;
+        return list;
     }
 
 }
