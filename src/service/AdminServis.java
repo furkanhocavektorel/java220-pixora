@@ -20,4 +20,15 @@ public class AdminServis {
 
     }
 
+
+    public void deleteAdmin(String mail){
+        AdminRepository adminRepository= new AdminRepository();
+
+        Admin admin= adminRepository.adminGetirMaileGore(mail);
+
+        adminRepository.deleteAdmin(admin);
+    }
+
+
+
 }

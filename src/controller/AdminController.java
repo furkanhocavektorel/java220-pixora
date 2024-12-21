@@ -12,4 +12,10 @@ public class AdminController {
 
     }
 
+    public void deleteAdmin(String email){
+        AdminServis adminServis= new AdminServis();
+        adminServis.deleteAdmin(email);
+    }
+
+
 }
