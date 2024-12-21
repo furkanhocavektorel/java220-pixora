@@ -2,10 +2,12 @@ package service;
 
 import entity.Kullanici;
 import repository.KullaniciRepository;
+import service.interfaceler.IKullaniciServis;
 
 import java.util.List;
 
-public class KullaniciServis {
+public class KullaniciServis implements IKullaniciServis {
+    KullaniciRepository kullaniciRepository = new KullaniciRepository();
 
     public void kullanciKaydet(String ad,String soyad,String email,
                                String sifre,String kullaniciAdi){
@@ -17,22 +19,18 @@ public class KullaniciServis {
         kullanici.setKullaniciAdi(kullaniciAdi);
         kullanici.setEmail(email);
 
-        KullaniciRepository kullaniciRepository = new KullaniciRepository();
         kullaniciRepository.kullaniciKaydet(kullanici);
     }
 
-    public Kullanici kullaniciGetirKullaniciAdinaGore(String kullaniciAdi){
+    public Kullanici kullaniciBulKullaniciAdinaGore(String kullaniciAdi){
 
-        KullaniciRepository kullaniciRepository= new KullaniciRepository();
         return kullaniciRepository.kullaniciGetirKullaniciAdinaGore(kullaniciAdi);
     }
 
+    @Override
     public List<Kullanici> kullaniciGetirAdaGore(String ad){
 
-        KullaniciRepository kullaniciRepository= new KullaniciRepository();
-
         return kullaniciRepository.kullaniciGetirAdaGore(ad);
-
     }
 
 

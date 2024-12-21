@@ -29,8 +29,6 @@ public class KullaniciRepository {
         return kullanici;
     }
 
-
-
     public List<Kullanici> kullaniciGetirAdaGore (String ad){
 
         List<Kullanici> filtreliList= new ArrayList<>();

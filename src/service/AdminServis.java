@@ -5,25 +5,25 @@ import repository.AdminRepository;
 
 public class AdminServis {
 
+    AdminRepository adminRepository;
+
+    public AdminServis(){
+        adminRepository=new AdminRepository();
+    }
+
 
     public void adminKaydet(String ad, String soyad, String sifre, String email) {
-
         Admin admin= new Admin();
         admin.setAd(ad);
         admin.setSoyad(soyad);
         admin.setEmail(email);
         admin.setSifre(sifre);
-
-        AdminRepository adminRepository= new AdminRepository();
         adminRepository.adminSave(admin);
-
 
     }
 
 
     public void deleteAdmin(String mail){
-        AdminRepository adminRepository= new AdminRepository();
-
         Admin admin= adminRepository.adminGetirMaileGore(mail);
 
         adminRepository.deleteAdmin(admin);

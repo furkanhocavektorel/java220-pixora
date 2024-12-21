@@ -3,17 +3,20 @@ package controller;
 import service.AdminServis;
 
 public class AdminController {
+    AdminServis adminServis;
 
-    public void saveAdmin(String ad,String soyad,String sifre,String email){
+    public AdminController() {
+        this.adminServis = new AdminServis();
+    }
 
-        AdminServis adminServis= new AdminServis();
+    public void saveAdmin(String ad, String soyad, String sifre, String email){
 
         adminServis.adminKaydet(ad,soyad,sifre,email);
 
     }
 
     public void deleteAdmin(String email){
-        AdminServis adminServis= new AdminServis();
+
         adminServis.deleteAdmin(email);
     }
 
